@@ -54,7 +54,7 @@ resource "aws_security_group" "jenkins" {
 
 resource "aws_instance" "jenkins" {
   ami           = data.aws_ami.amazon_linux.id
-  instance_type = "t3.micro"
+  instance_type = "t3.small"
 
   subnet_id = aws_subnet.public_1.id
 
